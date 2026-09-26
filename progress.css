@@ -1,0 +1,833 @@
+/* ================================
+   Progress Page
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+   background: linear-gradient(to bottom, #12110f, #333333);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+header {
+    width: 100%;
+    padding: 20px 7%;
+    position: relative;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 22px;
+
+    background: rgba(31, 30, 27, 0.88);
+    border: 1px solid rgba(214, 185, 140, 0.15);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #d6b98c;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d8d4cc;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d6b98c;
+}
+
+
+/* ================================
+   Dropdown
+================================ */
+
+.dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dropdown > a i {
+    font-size: 10px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+
+    width: 190px;
+
+    display: none;
+
+    padding: 10px;
+
+    background: rgba(31, 30, 27, 0.96);
+    border: 1px solid rgba(214, 185, 140, 0.15);
+    border-radius: 14px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    color: #d8d4cc;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(214, 185, 140, 0.08);
+    color: #d6b98c;
+}
+
+.dropdown-menu a i {
+    width: 18px;
+    color: #d6b98c;
+}
+
+
+/* ================================
+   Theme Button
+================================ */
+
+.theme-btn {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(214, 185, 140, 0.2);
+    border-radius: 50%;
+
+    background: rgba(214, 185, 140, 0.06);
+
+    color: #d6b98c;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: rgba(214, 185, 140, 0.15);
+    transform: rotate(15deg);
+}
+
+
+/* ================================
+   Hero
+================================ */
+
+.progress-hero {
+    max-width: 900px;
+    margin: 70px auto 55px;
+
+    text-align: center;
+
+    padding: 0 20px;
+}
+
+.progress-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: rgba(214, 185, 140, 0.08);
+    border: 1px solid rgba(214, 185, 140, 0.18);
+
+    color: #d6b98c;
+
+    font-size: 25px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.progress-hero span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d6b98c;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.progress-hero h1 {
+    font-size: 45px;
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+.progress-hero h1 b {
+    color: #d6b98c;
+    font-weight: 600;
+}
+
+.progress-hero p {
+    max-width: 600px;
+
+    margin: 12px auto 0;
+
+    color: #9f9b94;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   Main Section
+================================ */
+
+.progress-section {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 0 20px 80px;
+}
+
+
+/* ================================
+   Overall Card
+================================ */
+
+.overall-card {
+    padding: 30px;
+
+    background: rgba(31, 30, 27, 0.88);
+
+    border: 1px solid rgba(214, 185, 140, 0.14);
+    border-radius: 22px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.section-head span {
+    color: #d8d4cc;
+    font-size: 16px;
+}
+
+.section-head strong {
+    color: #d6b98c;
+    font-size: 22px;
+}
+
+
+/* ================================
+   Overall Progress Bar
+================================ */
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+
+    overflow: hidden;
+
+    background: #25231f;
+
+    border-radius: 20px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+
+    background: #d6b98c;
+
+    border-radius: 20px;
+
+    transition: width 0.6s ease;
+}
+
+
+/* ================================
+   Overall Stats
+================================ */
+
+.overall-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.overall-stats div {
+    padding: 18px;
+
+    text-align: center;
+
+    background: rgba(214, 185, 140, 0.04);
+
+    border: 1px solid rgba(214, 185, 140, 0.08);
+
+    border-radius: 14px;
+}
+
+.overall-stats strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.overall-stats span {
+    color: #8f8b84;
+    font-size: 13px;
+}
+
+
+/* ================================
+   Section Titles
+================================ */
+
+.category-title,
+.recent-title {
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+
+.category-title > span,
+.recent-title > span {
+    color: #d6b98c;
+    font-size: 13px;
+}
+
+.category-title h2,
+.recent-title h2 {
+    margin-top: 5px;
+
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.category-title h2 b,
+.recent-title h2 b {
+    color: #d6b98c;
+    font-weight: 600;
+}
+
+
+/* ================================
+   Category Grid
+================================ */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.category-card {
+    padding: 22px;
+
+    background: rgba(31, 30, 27, 0.82);
+
+    border: 1px solid rgba(214, 185, 140, 0.12);
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(214, 185, 140, 0.3);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.category-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.category-name {
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.category-percent {
+    color: #d6b98c;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.category-bar {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    background: #25231f;
+
+    border-radius: 20px;
+
+    margin-bottom: 12px;
+}
+
+.category-fill {
+    width: 0%;
+    height: 100%;
+
+    background: #d6b98c;
+
+    border-radius: 20px;
+
+    transition: width 0.6s ease;
+}
+
+.category-count {
+    color: #8f8b84;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   Recently Viewed
+================================ */
+
+.recent-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.recent-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+
+    background: rgba(31, 30, 27, 0.82);
+
+    border: 1px solid rgba(214, 185, 140, 0.12);
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.recent-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(214, 185, 140, 0.3);
+
+    background: rgba(214, 185, 140, 0.06);
+}
+
+.recent-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(214, 185, 140, 0.08);
+
+    color: #d6b98c;
+
+    font-size: 17px;
+}
+
+.recent-info {
+    flex: 1;
+}
+
+.recent-info h3 {
+    margin-bottom: 3px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.recent-info p {
+    color: #8f8b84;
+
+    font-size: 12px;
+}
+
+.recent-arrow {
+    color: #d6b98c;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.recent-card:hover .recent-arrow {
+    transform: translateX(4px);
+}
+
+.recent-empty {
+    grid-column: 1 / -1;
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: #8f8b84;
+
+    background: rgba(31, 30, 27, 0.6);
+
+    border: 1px dashed rgba(214, 185, 140, 0.15);
+
+    border-radius: 18px;
+}
+
+
+/* ================================
+   Reset Button
+================================ */
+
+.reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin: 45px auto 0;
+
+    padding: 12px 22px;
+
+    border: 1px solid rgba(214, 185, 140, 0.18);
+    border-radius: 12px;
+
+    background: rgba(214, 185, 140, 0.05);
+
+    color: #c9c4bb;
+
+    font-family: "Cairo", sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.reset-btn:hover {
+    background: rgba(214, 185, 140, 0.1);
+
+    color: #d6b98c;
+
+    border-color: rgba(214, 185, 140, 0.35);
+}
+
+.reset-btn i {
+    color: #d6b98c;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(214, 185, 140, 0.08);
+
+    color: #77736d;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 15px 4%;
+    }
+
+    nav {
+        padding: 14px 18px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress-hero h1 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 12px 15px;
+    }
+
+    nav {
+        padding: 13px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        right: -20px;
+    }
+
+    .progress-hero {
+        margin-top: 45px;
+        margin-bottom: 40px;
+    }
+
+    .progress-hero h1 {
+        font-size: 32px;
+    }
+
+    .progress-hero p {
+        font-size: 13px;
+    }
+
+    .overall-card {
+        padding: 22px;
+    }
+
+    .overall-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-title h2,
+    .recent-title h2 {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .progress-section {
+        padding: 0 15px 60px;
+    }
+
+    .progress-hero {
+        padding: 0 15px;
+    }
+
+    .progress-hero h1 {
+        font-size: 28px;
+    }
+
+    .section-head strong {
+        font-size: 19px;
+    }
+
+    .recent-card {
+        padding: 15px;
+    }
+
+    .recent-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* =========================
+   Empty State Link
+========================= */
+
+.recent-empty a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    padding: 11px 20px;
+
+    border: 1px solid rgba(214, 185, 140, 0.20);
+
+    border-radius: 11px;
+
+    background: rgba(214, 185, 140, 0.09);
+
+    color: #d6b98c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.recent-empty a:hover {
+    background: #d6b98c;
+
+    color: #292929;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(214, 185, 140, 0.18);
+}
+
+
+.recent-empty a i {
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+
+.recent-empty a:hover i {
+    transform: translateX(-4px);
+}
+
+
+
+/* =========================
+   Recent Card Category
+========================= */
+
+.recent-info .recent-category {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #d6b98c;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.recent-info .recent-category:hover {
+    color: #ead4ae;
+}

@@ -1,0 +1,8 @@
+/* Minimal mobile menu placeholder to satisfy references */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .mobile-menu { display: block; }
+}

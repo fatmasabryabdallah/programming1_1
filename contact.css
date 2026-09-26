@@ -1,0 +1,575 @@
+/* ==============================
+   General
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #222,
+        #444,
+        #252525
+    );
+
+    color: #f2f2f2;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   Header
+============================== */
+
+header {
+    padding: 20px 7%;
+}
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+.logo span {
+    color: #d6b98c;
+}
+
+
+/* Navigation */
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    list-style: none;
+}
+
+nav ul a {
+    color: #dddddd;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    color: #d6b98c;
+}
+
+
+/* ==============================
+   Theme Button
+============================== */
+
+.theme-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #d6b98c;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: rgba(214, 185, 140, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   Contact Hero
+============================== */
+
+.contact-hero {
+    width: min(950px, 90%);
+
+    margin: 70px auto 45px;
+
+    padding: 65px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(214, 185, 140, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: rgba(214, 185, 140, 0.12);
+
+    color: #d6b98c;
+
+    font-size: 32px;
+}
+
+.contact-hero > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #d6b98c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.contact-hero h1 {
+    margin-bottom: 18px;
+
+    font-size: clamp(35px, 6vw, 60px);
+}
+
+.contact-hero h1 b {
+    color: #d6b98c;
+}
+
+.contact-hero p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #bbbbbb;
+
+    line-height: 2;
+
+    font-size: 16px;
+}
+
+
+/* ==============================
+   Contact Section
+============================== */
+
+.contact-section {
+    width: min(800px, 90%);
+
+    margin: auto;
+
+    padding-bottom: 80px;
+}
+
+
+/* ==============================
+   Contact Info
+============================== */
+
+.contact-info {
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(214, 185, 140, 0.12);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.section-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: #d6b98c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+
+    font-size: 30px;
+}
+
+.contact-info h2 b {
+    color: #d6b98c;
+}
+
+.contact-info p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #bbbbbb;
+
+    line-height: 2;
+
+    font-size: 15px;
+}
+
+
+/* ==============================
+   Contact Form
+============================== */
+
+.contact-form {
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(214, 185, 140, 0.12);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Form Header */
+
+.form-header {
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.form-header > span {
+    color: #d6b98c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-header h2 {
+    margin-top: 6px;
+
+    font-size: 30px;
+}
+
+.form-header h2 b {
+    color: #d6b98c;
+}
+
+
+/* ==============================
+   Form Group
+============================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ==============================
+   Input
+============================== */
+
+.input-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 15px;
+
+    min-height: 55px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.input-box:focus-within {
+    border-color: rgba(214, 185, 140, 0.45);
+
+    box-shadow:
+        0 0 0 4px rgba(214, 185, 140, 0.05);
+}
+
+.input-box i {
+    flex-shrink: 0;
+
+    color: #d6b98c;
+
+    font-size: 16px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.input-box input {
+    height: 53px;
+}
+
+.input-box textarea {
+    min-height: 130px;
+
+    padding: 14px 0;
+
+    resize: vertical;
+
+    line-height: 1.8;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #858585;
+}
+
+
+/* ==============================
+   Textarea
+============================== */
+
+.textarea-box {
+    align-items: flex-start;
+
+    padding-top: 13px;
+}
+
+.textarea-box i {
+    margin-top: 3px;
+}
+
+
+/* ==============================
+   Button
+============================== */
+
+.contact-form button {
+    width: 100%;
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #d6b98c;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ead3ad;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(214, 185, 140, 0.15);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   Footer
+============================== */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border-top: 1px solid rgba(214, 185, 140, 0.1);
+
+    color: #999999;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        gap: 14px;
+    }
+
+    .contact-section {
+        width: min(700px, 90%);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+
+        padding: 18px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .contact-hero {
+        margin-top: 30px;
+
+        padding: 50px 20px;
+    }
+
+    .contact-section {
+        width: 90%;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 42px;
+    }
+}
